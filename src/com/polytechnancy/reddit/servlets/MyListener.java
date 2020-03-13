@@ -6,16 +6,32 @@ import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
 
 
+
+/**
+ * Application Lifecycle Listener implementation class MyListener
+ *
+ */
 @WebListener
 public class MyListener implements HttpSessionListener {
 
-	public void sessionCreated(HttpSessionEvent se) {
-		HttpSession session = se.getSession();
-		session.setMaxInactiveInterval(60);
-		System.out.println("Session créée");
-	}
-	
-	public void sessionDestroyed(HttpSessionEvent se) {
-		System.out.println("Session détruite");
-	}
+    /**
+     * Default constructor. 
+     */
+    public MyListener() {
+        // TODO Auto-generated constructor stub
+    }
+
+	/**
+     * @see HttpSessionListener#sessionCreated(HttpSessionEvent)
+     */
+    @Override
+	public void sessionCreated(HttpSessionEvent se)  { 
+         HttpSession session = se.getSession();
+         session.setMaxInactiveInterval(60);
+         System.out.println("Session creee");
+    }
+
+	/**
+     * @see HttpSessionListener#sessionDestroyed(HttpSessionEvent)
+     */
 }

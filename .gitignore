@@ -1,6 +1,5 @@
-
-# Created by https://www.gitignore.io/api/java,macos,eclipse
-# Edit at https://www.gitignore.io/?templates=java,macos,eclipse
+# Created by https://www.gitignore.io/api/java,macos,eclipse,java-web
+# Edit at https://www.gitignore.io/?templates=java,macos,eclipse,java-web
 
 ### Eclipse ###
 .metadata
@@ -96,6 +95,11 @@ local.properties
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
+
+### Java-Web ###
+## ignoring target file
+target/
+
 ### macOS ###
 # General
 .DS_Store
@@ -128,3 +132,4 @@ Temporary Items
 
 # Others
 /build
+
